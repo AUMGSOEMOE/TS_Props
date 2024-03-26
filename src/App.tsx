@@ -1,34 +1,22 @@
-import Greetomponent from "./components/Greet.component"
-import PersonComponent from "./components/Person.component"
-import PersonListComponent from "./components/PersonList.component"
+
+import GreetComponent from "./components/Greet.component"
+import HeadingComponent from "./components/Heading.component"
+import OscarComponent from "./components/Oscar.component"
+import StatusComponent from "./components/Status.component"
 
 
 function App() {
 
-  const personName = {
-    first: "Bruce",
-    last:"Wayne"
-  }
-  const personNameList = [
-    {
-    first: "Bruce",
-    last:"Wayne"
-    },
-    {
-      first: "Clark",
-      last:"Kent"
-    },
-    {
-        first: "Diana",
-        last:"Prince"
-    }
-]
+ 
 
   return (
     <>
-      <Greetomponent name="Agoe" amount={10} right={false} />
-      <PersonComponent name={personName} />
-      <PersonListComponent names={personNameList} />
+      <StatusComponent status="success" />
+      <HeadingComponent>HeadingComponent</HeadingComponent>
+      <OscarComponent>
+        <HeadingComponent>Oscar goes to Johnny Depp</HeadingComponent>
+      </OscarComponent>
+      <GreetComponent name="Agoe" amount={10}  right={true}  />
     </>
   )
 }
