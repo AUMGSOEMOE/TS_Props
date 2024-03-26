@@ -1,14 +1,11 @@
 import React from 'react'
+import { Reuse } from './Reuse'
 
-type ContainerProps = {
-    children : React.ReactNode
-    styles : React.CSSProperties
 
-}
 
-const ContainerComponent = (props: ContainerProps) => {
+const ContainerComponent = ({styles,children}: Reuse) => {
   return (
-    <div style={props.styles}>{props.children}</div>
+    <div style={styles}>{children}</div>
   )
 }
 
